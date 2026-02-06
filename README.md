@@ -1,83 +1,65 @@
-notas = [
-    {"bimestre": "1º", "aluno": "Lucas", "nota": 60},
-    {"bimestre": "1º", "aluno": "Lucas", "nota": 70},
-    {"bimestre": "1º", "aluno": "Paula", "nota": 80},
-    {"bimestre": "1º", "aluno": "Rafael", "nota": 50},
+📚 Sistema de Análise de Notas Escolares em Python
 
-    {"bimestre": "2º", "aluno": "Lucas", "nota": 90},
-    {"bimestre": "2º", "aluno": "Paula", "nota": 85},
-    {"bimestre": "2º", "aluno": "Rafael", "nota": 75},
-    {"bimestre": "2º", "aluno": "Marina", "nota": 95},
+Este projeto consiste em um sistema completo de análise de notas escolares, capaz de processar o desempenho dos alunos ao longo de diferentes bimestres e gerar um relatório analítico detalhado.
 
-    {"bimestre": "3º", "aluno": "Lucas", "nota": 70},
-    {"bimestre": "3º", "aluno": "Paula", "nota": 60},
-    {"bimestre": "3º", "aluno": "Marina", "nota": 80},
-]
+O programa consolida informações como:
 
+Total de notas por aluno
 
-total_de_notas_por_aluno = {} 
-aluno_maior_nota = None 
-total_de_notas_por_bimestre = {} 
-bimestre_campeao =None 
-classificacao = {}
+Aluno com melhor desempenho geral
 
+Total de notas por bimestre
 
-# TOTAL DE NOTAS POR ALUNO
+Bimestre com melhor desempenho
 
-for desempenho in notas:
-    aluno = desempenho["aluno"]
-    nota = desempenho["nota"]
+Classificação dos alunos por nível de desempenho
 
-    if aluno not in total_de_notas_por_aluno:
-        total_de_notas_por_aluno[aluno] = 0
+O sistema foi desenvolvido para execução no terminal, utilizando conceitos fundamentais da linguagem Python, com foco em lógica, organização de dados e análise estatística básica.
 
-    total_de_notas_por_aluno[aluno] +=nota
+🎯 Objetivo do Projeto
 
-# ALUNO MAIOR NOTA
+O objetivo deste projeto é praticar e consolidar conhecimentos em:
 
-maior_nota = 0
+Lógica de programação
 
-for aluno , total in total_de_notas_por_aluno.items():
-    if total > maior_nota:
-        maior_nota = total
-        aluno_maior_nota = aluno 
+Estruturas de repetição (for)
 
+Dicionários e listas em Python
 
+Estruturas condicionais (if / elif / else)
 
-# TOTAL DE NOTAS POR BIMESTRE
-for temporada in notas:
-    bimestre = temporada["bimestre"]
-    nota = temporada["nota"]
+Agregação de dados
 
-    if bimestre not in total_de_notas_por_bimestre:
-        total_de_notas_por_bimestre[bimestre] = 0
+Comparações e classificações
 
-    total_de_notas_por_bimestre[bimestre]+=nota
+Organização de código e relatórios
 
+⚙️ Funcionalidades
 
-# BIMESTRE CAMPEAO
+Leitura de notas organizadas por aluno e bimestre
 
-maior_bimestre = 0
+Cálculo automático de:
 
-for bimestre , total in total_de_notas_por_bimestre.items():
-    if total > maior_bimestre:
-        maior_bimestre = total
-        total_bimestre = {bimestre:maior_bimestre}
-        bimestre_campeao = total_bimestre
+Total de notas por aluno
 
+Total de notas por bimestre
 
-for aluno , total in total_de_notas_por_aluno.items():
-    if total <= 150:
-        classificacao[aluno] = "baixa"
+Identificação do:
 
-    elif 151 <= total  <=200:
-        classificacao[aluno ] = "media"
+Aluno com maior soma de notas
 
-    else:
-        classificacao[aluno] ="excelente"
+Bimestre com melhor desempenho geral
 
-print(total_de_notas_por_aluno)
-print(aluno_maior_nota)
-print(total_de_notas_por_bimestre)
-print(bimestre_campeao)
-print(classificacao)
+Classificação dos alunos em:
+
+baixa
+
+media
+
+excelente
+
+Exibição de um relatório final completo no terminal
+
+🛠️ Tecnologias Utilizadas
+
+Python 3
